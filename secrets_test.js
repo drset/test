@@ -2,6 +2,10 @@
 
 https://www.site.com/find_this_endpoint?param1=true
 
+# Test html endpoint
+
+<a href="https://www.site.com/find_this_href_endpoint?param2=true">test</a>
+
 # Test ajax endpoints
 
 $.ajax({
