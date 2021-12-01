@@ -72,3 +72,17 @@ end
 
 USERNAME = "superman"
 PASSWORD = "kryptonite"
+
+
+## User and password on properties files (java)
+
+spring.datasource.url=jdbc:mysql://localhost/icecrown?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull
+spring.datasource.username=spring
+spring.datasource.password=123456
+
+# Test Telegram
+
+## All the keys here are false, for testing tools that detect the leak, don't bother.
+
+TELEGRAM_TOKEN_ID = '1809213853:AAGr2DkzlDF9BiyH24YOJKwkCogLIMFfieU'
+TELEGRAM_CHAT_ID = '1865210816'
