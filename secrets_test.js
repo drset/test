@@ -20,3 +20,55 @@ $.ajax({
 ## All the keys here are false, for testing tools that detect the leak, don't bother.
 
 SHODAN_API_KEY = "gCpIwXNTQP2s4qualIaDcIhNeEePo2pu" 
+
+# Test user and password
+
+## User and password in Json format
+
+  context "and there is an ar_config" do
+    let(:adapter) { :mysql }
+    let(:ar_config) do
+      {
+        adapter: adapter.to_s,
+        username: "bobby",
+        password: "jackiechain",
+        host: "db_host",
+        port: 0_001,
+        database: "db_database"
+      }
+    end
+    
+    let(:source) { { email: 'user@example.org', password: 'whatever', param: true } }
+
+## User and password on config files (yalm)
+
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+
+  postgres:
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=postgres
+
+## Regular user and password
+
+Grantinee.configure do |c|
+  c.engine   = :mysql
+
+  c.username = 'root'
+  c.password = 'mysql'
+  c.hostname = 'localhost'
+  c.port     = 3306
+  c.database = 'database_name'
+end
+
+ Necromancer.connection = mysql.connector.connect(host='localhost',
+                                                 database='icecrown',
+                                                 user='aroot',
+                                                 password='aroot')
+
+USERNAME = "superman"
+PASSWORD = "kryptonite"
