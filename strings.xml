@@ -2,3 +2,8 @@
 <string name="google_api_key">AIzaSyCoNay3IFV5ghR0c9xcQNHkUwZiA76Voog</string>
 <string name="absolute_url_test">https://site.com/api/v3/session/stop</string>
 <string name="relative_url_test">/api/gandalf/v2/live_push</string>
+<forms name=".MONOAUTH" loginUrl="login.aspx" protection="All" timeout="30" path="/">
+  <credentials passwordFormat="Clear">
+    <!--<user name="gonzalo" password="gonz"/>-->
+  </credentials>
+</forms>
