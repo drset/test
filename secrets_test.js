@@ -86,3 +86,20 @@ spring.datasource.password=123456
 
 TELEGRAM_TOKEN_ID = '1809213853:AAGr2DkzlDF9BiyH24YOJKwkCogLIMFfieU'
 TELEGRAM_CHAT_ID = '1865210816'
+
+
+<Postcoder
+	className="w-full text-teal border-teal rounded-md border-2 py-2 px-2 mb-2 text-xl text-left mx-auto"
+	placeholder="Enter your postcode"
+	apiKey="PCWJJ-BKG7P-7M5Q2-TV6LR"
+	onChange={(e) => onChange(e.target.value)}
+	onSelected={(data) => {
+		console.log(data)
+		// onChange(data.postcode)
+		setSelected(true)
+		setValue('address_1', data.addressline1, { shouldValidate: true })
+		setValue('address_2', data.addressline2)
+		setValue('city', data.posttown, { shouldValidate: true })
+		setValue('postcode', data.postcode, { shouldValidate: true })
+	}}
+/>
